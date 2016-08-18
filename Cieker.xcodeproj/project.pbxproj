@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEB90AB91D65BD6100A897DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB90AB81D65BD6100A897DE /* AppDelegate.swift */; };
+		CEB90ABB1D65BD6100A897DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB90ABA1D65BD6100A897DE /* ViewController.swift */; };
+		CEB90ABE1D65BD6100A897DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB90ABC1D65BD6100A897DE /* Main.storyboard */; };
+		CEB90AC01D65BD6100A897DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB90ABF1D65BD6100A897DE /* Assets.xcassets */; };
+		CEB90AC31D65BD6100A897DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB90AC11D65BD6100A897DE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CEB90AB51D65BD6100A897DE /* Cieker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cieker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB90AB81D65BD6100A897DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEB90ABA1D65BD6100A897DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEB90ABD1D65BD6100A897DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEB90ABF1D65BD6100A897DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEB90AC21D65BD6100A897DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEB90AC41D65BD6100A897DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEB90AB21D65BD6100A897DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEB90AAC1D65BD6100A897DE = {
+			isa = PBXGroup;
+			children = (
+				CEB90AB71D65BD6100A897DE /* Cieker */,
+				CEB90AB61D65BD6100A897DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEB90AB61D65BD6100A897DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEB90AB51D65BD6100A897DE /* Cieker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEB90AB71D65BD6100A897DE /* Cieker */ = {
+			isa = PBXGroup;
+			children = (
+				CEB90AB81D65BD6100A897DE /* AppDelegate.swift */,
+				CEB90ABA1D65BD6100A897DE /* ViewController.swift */,
+				CEB90ABC1D65BD6100A897DE /* Main.storyboard */,
+				CEB90ABF1D65BD6100A897DE /* Assets.xcassets */,
+				CEB90AC11D65BD6100A897DE /* LaunchScreen.storyboard */,
+				CEB90AC41D65BD6100A897DE /* Info.plist */,
+			);
+			path = Cieker;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEB90AB41D65BD6100A897DE /* Cieker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB90AC71D65BD6100A897DE /* Build configuration list for PBXNativeTarget "Cieker" */;
+			buildPhases = (
+				CEB90AB11D65BD6100A897DE /* Sources */,
+				CEB90AB21D65BD6100A897DE /* Frameworks */,
+				CEB90AB31D65BD6100A897DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cieker;
+			productName = Cieker;
+			productReference = CEB90AB51D65BD6100A897DE /* Cieker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEB90AAD1D65BD6100A897DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = bala;
+				TargetAttributes = {
+					CEB90AB41D65BD6100A897DE = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = CEB90AB01D65BD6100A897DE /* Build configuration list for PBXProject "Cieker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEB90AAC1D65BD6100A897DE;
+			productRefGroup = CEB90AB61D65BD6100A897DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEB90AB41D65BD6100A897DE /* Cieker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEB90AB31D65BD6100A897DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB90AC31D65BD6100A897DE /* LaunchScreen.storyboard in Resources */,
+				CEB90AC01D65BD6100A897DE /* Assets.xcassets in Resources */,
+				CEB90ABE1D65BD6100A897DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEB90AB11D65BD6100A897DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB90ABB1D65BD6100A897DE /* ViewController.swift in Sources */,
+				CEB90AB91D65BD6100A897DE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEB90ABC1D65BD6100A897DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEB90ABD1D65BD6100A897DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEB90AC11D65BD6100A897DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEB90AC21D65BD6100A897DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEB90AC51D65BD6100A897DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEB90AC61D65BD6100A897DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEB90AC81D65BD6100A897DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Cieker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.Cieker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CEB90AC91D65BD6100A897DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Cieker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.Cieker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEB90AB01D65BD6100A897DE /* Build configuration list for PBXProject "Cieker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB90AC51D65BD6100A897DE /* Debug */,
+				CEB90AC61D65BD6100A897DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEB90AC71D65BD6100A897DE /* Build configuration list for PBXNativeTarget "Cieker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB90AC81D65BD6100A897DE /* Debug */,
+				CEB90AC91D65BD6100A897DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEB90AAD1D65BD6100A897DE /* Project object */;
+}
