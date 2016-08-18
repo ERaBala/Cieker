@@ -12,6 +12,10 @@
 		CEB90ABE1D65BD6100A897DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB90ABC1D65BD6100A897DE /* Main.storyboard */; };
 		CEB90AC01D65BD6100A897DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB90ABF1D65BD6100A897DE /* Assets.xcassets */; };
 		CEB90AC31D65BD6100A897DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB90AC11D65BD6100A897DE /* LaunchScreen.storyboard */; };
+		CEB90ACD1D65BDD800A897DE /* kConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB90ACB1D65BDD800A897DE /* kConstant.swift */; };
+		CEB90ACE1D65BDD800A897DE /* KSideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB90ACC1D65BDD800A897DE /* KSideMenuVC.swift */; };
+		CEB90AD01D65C02B00A897DE /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB90ACF1D65C02B00A897DE /* SliderViewController.swift */; };
+		CEB90AD41D65E39000A897DE /* Nav-bar-1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB90AD31D65E39000A897DE /* Nav-bar-1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		CEB90ABF1D65BD6100A897DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEB90AC21D65BD6100A897DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEB90AC41D65BD6100A897DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB90ACB1D65BDD800A897DE /* kConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = kConstant.swift; path = SliderPlugin/kConstant.swift; sourceTree = "<group>"; };
+		CEB90ACC1D65BDD800A897DE /* KSideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KSideMenuVC.swift; path = SliderPlugin/KSideMenuVC.swift; sourceTree = "<group>"; };
+		CEB90ACF1D65C02B00A897DE /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
+		CEB90AD31D65E39000A897DE /* Nav-bar-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Nav-bar-1.png"; path = "Cieker/Resources/Test/Nav-bar-1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB90AB71D65BD6100A897DE /* Cieker */,
+				CEB90AD11D65E30500A897DE /* Resources */,
 				CEB90AB61D65BD6100A897DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,14 +63,41 @@
 		CEB90AB71D65BD6100A897DE /* Cieker */ = {
 			isa = PBXGroup;
 			children = (
+				CEB90ABC1D65BD6100A897DE /* Main.storyboard */,
+				CEB90ACA1D65BD6A00A897DE /* SliderViewPlugin */,
 				CEB90AB81D65BD6100A897DE /* AppDelegate.swift */,
 				CEB90ABA1D65BD6100A897DE /* ViewController.swift */,
-				CEB90ABC1D65BD6100A897DE /* Main.storyboard */,
+				CEB90ACF1D65C02B00A897DE /* SliderViewController.swift */,
 				CEB90ABF1D65BD6100A897DE /* Assets.xcassets */,
 				CEB90AC11D65BD6100A897DE /* LaunchScreen.storyboard */,
 				CEB90AC41D65BD6100A897DE /* Info.plist */,
 			);
 			path = Cieker;
+			sourceTree = "<group>";
+		};
+		CEB90ACA1D65BD6A00A897DE /* SliderViewPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				CEB90ACB1D65BDD800A897DE /* kConstant.swift */,
+				CEB90ACC1D65BDD800A897DE /* KSideMenuVC.swift */,
+			);
+			name = SliderViewPlugin;
+			sourceTree = "<group>";
+		};
+		CEB90AD11D65E30500A897DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEB90AD21D65E33000A897DE /* Samples */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CEB90AD21D65E33000A897DE /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				CEB90AD31D65E39000A897DE /* Nav-bar-1.png */,
+			);
+			name = Samples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB90AC31D65BD6100A897DE /* LaunchScreen.storyboard in Resources */,
+				CEB90AD41D65E39000A897DE /* Nav-bar-1.png in Resources */,
 				CEB90AC01D65BD6100A897DE /* Assets.xcassets in Resources */,
 				CEB90ABE1D65BD6100A897DE /* Main.storyboard in Resources */,
 			);
@@ -136,6 +173,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB90ABB1D65BD6100A897DE /* ViewController.swift in Sources */,
+				CEB90AD01D65C02B00A897DE /* SliderViewController.swift in Sources */,
+				CEB90ACD1D65BDD800A897DE /* kConstant.swift in Sources */,
+				CEB90ACE1D65BDD800A897DE /* KSideMenuVC.swift in Sources */,
 				CEB90AB91D65BD6100A897DE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
