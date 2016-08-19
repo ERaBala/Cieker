@@ -13,11 +13,11 @@ class SliderViewController: UIViewController {
     @IBOutlet weak var TabelView: UITableView!
     @IBOutlet weak var ProfilePicImageView: UIImageView!
     
-     let aData : NSArray = ["First","Second","Third"]
+    var aData : [String] = ["bala","jeva","seetha"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-     self.TabelView.reloadData()
-        // Do any additional setup after loading the view.
+            // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,20 +30,13 @@ class SliderViewController: UIViewController {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let aCell = tableView.dequeueReusableCellWithIdentifier(
-            "kCell", forIndexPath: indexPath)
-//        let aLabel : UILabel = aCell.viewWithTag(10) as! UILabel
-//        aLabel.text = aData[indexPath.row] as? String
+            "Cell", forIndexPath: indexPath)
+       
         return aCell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == 0 {
-            kConstantObj.SetIntialMainViewController("firstVC") // firstVC is storyboard ID
-        }else if indexPath.row == 1 {
-            kConstantObj.SetIntialMainViewController("secondVC")
-        }else if indexPath.row == 2 {
-            kConstantObj.SetIntialMainViewController("thirdVC")
-        }
+       
     }
 
 

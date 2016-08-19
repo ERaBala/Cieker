@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		2DFB87841D66ADDC0042E4AD /* FormGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB87831D66ADDC0042E4AD /* FormGlobal.swift */; };
 		7B802617B2D4625797981FA7 /* Pods_Cieker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD14D3FBE75903BDF977D8A /* Pods_Cieker.framework */; };
+		CE6552491D67061C00C916C4 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6552471D67061C00C916C4 /* ENSideMenu.swift */; };
+		CE65524A1D67061C00C916C4 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6552481D67061C00C916C4 /* ENSideMenuNavigationController.swift */; };
+		CE65524C1D67062800C916C4 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65524B1D67062800C916C4 /* SliderViewController.swift */; };
+		CE65524E1D6706B200C916C4 /* SliderNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65524D1D6706B200C916C4 /* SliderNavigationVC.swift */; };
 		CEB90AB91D65BD6100A897DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB90AB81D65BD6100A897DE /* AppDelegate.swift */; };
 		CEB90ABB1D65BD6100A897DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB90ABA1D65BD6100A897DE /* ViewController.swift */; };
 		CEB90ABE1D65BD6100A897DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB90ABC1D65BD6100A897DE /* Main.storyboard */; };
 		CEB90AC01D65BD6100A897DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB90ABF1D65BD6100A897DE /* Assets.xcassets */; };
 		CEB90AC31D65BD6100A897DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB90AC11D65BD6100A897DE /* LaunchScreen.storyboard */; };
-		CEB90ACD1D65BDD800A897DE /* kConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB90ACB1D65BDD800A897DE /* kConstant.swift */; };
-		CEB90ACE1D65BDD800A897DE /* KSideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB90ACC1D65BDD800A897DE /* KSideMenuVC.swift */; };
-		CEB90AD01D65C02B00A897DE /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB90ACF1D65C02B00A897DE /* SliderViewController.swift */; };
-		CEB90AD41D65E39000A897DE /* Nav-bar-1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB90AD31D65E39000A897DE /* Nav-bar-1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2DFB87831D66ADDC0042E4AD /* FormGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormGlobal.swift; path = GlobelFiles/FormGlobal.swift; sourceTree = "<group>"; };
 		565F3124182CE3337D3DACF2 /* Pods-Cieker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cieker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cieker/Pods-Cieker.release.xcconfig"; sourceTree = "<group>"; };
 		8CD14D3FBE75903BDF977D8A /* Pods_Cieker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cieker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE6552471D67061C00C916C4 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenu.swift; path = SliderView/Plugin/ENSideMenu.swift; sourceTree = "<group>"; };
+		CE6552481D67061C00C916C4 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenuNavigationController.swift; path = SliderView/Plugin/ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
+		CE65524B1D67062800C916C4 /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SliderViewController.swift; path = SliderView/SliderViewController.swift; sourceTree = "<group>"; };
+		CE65524D1D6706B200C916C4 /* SliderNavigationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SliderNavigationVC.swift; path = SliderView/SliderNavigationVC.swift; sourceTree = "<group>"; };
 		CEB90AB51D65BD6100A897DE /* Cieker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cieker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB90AB81D65BD6100A897DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB90ABA1D65BD6100A897DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,10 +35,6 @@
 		CEB90ABF1D65BD6100A897DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEB90AC21D65BD6100A897DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEB90AC41D65BD6100A897DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEB90ACB1D65BDD800A897DE /* kConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = kConstant.swift; path = SliderPlugin/kConstant.swift; sourceTree = "<group>"; };
-		CEB90ACC1D65BDD800A897DE /* KSideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KSideMenuVC.swift; path = SliderPlugin/KSideMenuVC.swift; sourceTree = "<group>"; };
-		CEB90ACF1D65C02B00A897DE /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
-		CEB90AD31D65E39000A897DE /* Nav-bar-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Nav-bar-1.png"; path = "Cieker/Resources/Test/Nav-bar-1.png"; sourceTree = "<group>"; };
 		DFE83F1FFD90AE1D49231D22 /* Pods-Cieker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cieker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cieker/Pods-Cieker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +67,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE6552461D67060B00C916C4 /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				CE6552471D67061C00C916C4 /* ENSideMenu.swift */,
+				CE6552481D67061C00C916C4 /* ENSideMenuNavigationController.swift */,
+			);
+			name = Plugin;
+			sourceTree = "<group>";
+		};
 		CEB90AAC1D65BD6100A897DE = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +103,6 @@
 				CEB90ACA1D65BD6A00A897DE /* SliderViewPlugin */,
 				CEB90AB81D65BD6100A897DE /* AppDelegate.swift */,
 				CEB90ABA1D65BD6100A897DE /* ViewController.swift */,
-				CEB90ACF1D65C02B00A897DE /* SliderViewController.swift */,
 				CEB90ABF1D65BD6100A897DE /* Assets.xcassets */,
 				CEB90AC11D65BD6100A897DE /* LaunchScreen.storyboard */,
 				CEB90AC41D65BD6100A897DE /* Info.plist */,
@@ -105,8 +113,9 @@
 		CEB90ACA1D65BD6A00A897DE /* SliderViewPlugin */ = {
 			isa = PBXGroup;
 			children = (
-				CEB90ACB1D65BDD800A897DE /* kConstant.swift */,
-				CEB90ACC1D65BDD800A897DE /* KSideMenuVC.swift */,
+				CE6552461D67060B00C916C4 /* Plugin */,
+				CE65524D1D6706B200C916C4 /* SliderNavigationVC.swift */,
+				CE65524B1D67062800C916C4 /* SliderViewController.swift */,
 			);
 			name = SliderViewPlugin;
 			sourceTree = "<group>";
@@ -122,7 +131,6 @@
 		CEB90AD21D65E33000A897DE /* Samples */ = {
 			isa = PBXGroup;
 			children = (
-				CEB90AD31D65E39000A897DE /* Nav-bar-1.png */,
 			);
 			name = Samples;
 			sourceTree = "<group>";
@@ -162,7 +170,7 @@
 				TargetAttributes = {
 					CEB90AB41D65BD6100A897DE = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 547UZTJW2V;
+						DevelopmentTeam = ESS76MX5U7;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -195,7 +203,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB90AC31D65BD6100A897DE /* LaunchScreen.storyboard in Resources */,
-				CEB90AD41D65E39000A897DE /* Nav-bar-1.png in Resources */,
 				CEB90AC01D65BD6100A897DE /* Assets.xcassets in Resources */,
 				CEB90ABE1D65BD6100A897DE /* Main.storyboard in Resources */,
 			);
@@ -256,11 +263,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6552491D67061C00C916C4 /* ENSideMenu.swift in Sources */,
 				CEB90ABB1D65BD6100A897DE /* ViewController.swift in Sources */,
-				CEB90AD01D65C02B00A897DE /* SliderViewController.swift in Sources */,
-				CEB90ACD1D65BDD800A897DE /* kConstant.swift in Sources */,
-				CEB90ACE1D65BDD800A897DE /* KSideMenuVC.swift in Sources */,
+				CE65524E1D6706B200C916C4 /* SliderNavigationVC.swift in Sources */,
 				2DFB87841D66ADDC0042E4AD /* FormGlobal.swift in Sources */,
+				CE65524C1D67062800C916C4 /* SliderViewController.swift in Sources */,
+				CE65524A1D67061C00C916C4 /* ENSideMenuNavigationController.swift in Sources */,
 				CEB90AB91D65BD6100A897DE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +388,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Cieker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cieker.ios.vjtarget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibtest.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -393,7 +401,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Cieker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cieker.ios.vjtarget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibtest.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

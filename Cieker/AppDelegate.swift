@@ -8,8 +8,6 @@
 import Foundation
 import UIKit
 
-let kConstantObj = kConstant()
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,9 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        let mainVcIntial = kConstantObj.SetIntialMainViewController("HomeScreenVC")
-        self.window?.rootViewController = mainVcIntial
         
         // Override point for customization after application launch.
         return true
