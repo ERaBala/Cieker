@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DF72FA91D676EAD00EC9774 /* bond_hub.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DF72FA71D676EAD00EC9774 /* bond_hub.png */; };
+		2DF72FAA1D676EAD00EC9774 /* Hub.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DF72FA81D676EAD00EC9774 /* Hub.png */; };
+		2DF72FAC1D678B5300EC9774 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DF72FAB1D678B5300EC9774 /* news.png */; };
+		2DF72FB01D678F8600EC9774 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DF72FAF1D678F8600EC9774 /* GoogleService-Info.plist */; };
 		2DFB87841D66ADDC0042E4AD /* FormGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB87831D66ADDC0042E4AD /* FormGlobal.swift */; };
 		7B802617B2D4625797981FA7 /* Pods_Cieker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD14D3FBE75903BDF977D8A /* Pods_Cieker.framework */; };
 		CE6552491D67061C00C916C4 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6552471D67061C00C916C4 /* ENSideMenu.swift */; };
@@ -21,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DF72FA71D676EAD00EC9774 /* bond_hub.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bond_hub.png; path = Cieker/Resources/bond_hub.png; sourceTree = "<group>"; };
+		2DF72FA81D676EAD00EC9774 /* Hub.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hub.png; path = Cieker/Resources/Hub.png; sourceTree = "<group>"; };
+		2DF72FAB1D678B5300EC9774 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = news.png; path = Cieker/Resources/news.png; sourceTree = "<group>"; };
+		2DF72FAF1D678F8600EC9774 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2DF72FB11D678FC100EC9774 /* Cieker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cieker-Bridging-Header.h"; sourceTree = "<group>"; };
 		2DFB87831D66ADDC0042E4AD /* FormGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormGlobal.swift; path = GlobelFiles/FormGlobal.swift; sourceTree = "<group>"; };
 		565F3124182CE3337D3DACF2 /* Pods-Cieker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cieker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cieker/Pods-Cieker.release.xcconfig"; sourceTree = "<group>"; };
 		8CD14D3FBE75903BDF977D8A /* Pods_Cieker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cieker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,12 +109,14 @@
 			children = (
 				CEB90ABC1D65BD6100A897DE /* Main.storyboard */,
 				2DFB87831D66ADDC0042E4AD /* FormGlobal.swift */,
-				CEB90ACA1D65BD6A00A897DE /* SliderViewPlugin */,
 				CEB90AB81D65BD6100A897DE /* AppDelegate.swift */,
+				CEB90ACA1D65BD6A00A897DE /* SliderViewPlugin */,
 				CEB90ABA1D65BD6100A897DE /* ViewController.swift */,
 				CEB90ABF1D65BD6100A897DE /* Assets.xcassets */,
 				CEB90AC11D65BD6100A897DE /* LaunchScreen.storyboard */,
 				CEB90AC41D65BD6100A897DE /* Info.plist */,
+				2DF72FAF1D678F8600EC9774 /* GoogleService-Info.plist */,
+				2DF72FB11D678FC100EC9774 /* Cieker-Bridging-Header.h */,
 			);
 			path = Cieker;
 			sourceTree = "<group>";
@@ -123,6 +134,9 @@
 		CEB90AD11D65E30500A897DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2DF72FAB1D678B5300EC9774 /* news.png */,
+				2DF72FA71D676EAD00EC9774 /* bond_hub.png */,
+				2DF72FA81D676EAD00EC9774 /* Hub.png */,
 				CEB90AD21D65E33000A897DE /* Samples */,
 			);
 			name = Resources;
@@ -170,7 +184,7 @@
 				TargetAttributes = {
 					CEB90AB41D65BD6100A897DE = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = ESS76MX5U7;
+						DevelopmentTeam = 547UZTJW2V;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -202,9 +216,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DF72FA91D676EAD00EC9774 /* bond_hub.png in Resources */,
+				2DF72FAA1D676EAD00EC9774 /* Hub.png in Resources */,
+				2DF72FAC1D678B5300EC9774 /* news.png in Resources */,
 				CEB90AC31D65BD6100A897DE /* LaunchScreen.storyboard in Resources */,
 				CEB90AC01D65BD6100A897DE /* Assets.xcassets in Resources */,
 				CEB90ABE1D65BD6100A897DE /* Main.storyboard in Resources */,
+				2DF72FB01D678F8600EC9774 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,11 +403,14 @@
 			baseConfigurationReference = DFE83F1FFD90AE1D49231D22 /* Pods-Cieker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Cieker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibtest.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cieker.ios.vjtarget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cieker/Cieker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -398,11 +419,13 @@
 			baseConfigurationReference = 565F3124182CE3337D3DACF2 /* Pods-Cieker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Cieker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibtest.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cieker.ios.vjtarget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cieker/Cieker-Bridging-Header.h";
 			};
 			name = Release;
 		};

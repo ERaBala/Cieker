@@ -42,9 +42,9 @@
                                 <rect key="frame" x="0.0" y="551" width="600" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem tag="1" title="Hub" id="3AB-Bf-Acb"/>
-                                    <tabBarItem tag="2" title="Scoops" id="bsx-ZZ-zgS"/>
-                                    <tabBarItem tag="3" title="Team" id="aUx-gM-uWK"/>
+                                    <tabBarItem tag="1" title="Hub" image="bond_hub.png" id="3AB-Bf-Acb"/>
+                                    <tabBarItem tag="2" title="Scoops" image="news.png" id="bsx-ZZ-zgS"/>
+                                    <tabBarItem tag="3" title="Team" image="Hub.png" id="aUx-gM-uWK"/>
                                     <tabBarItem tag="4" title="Q&amp;A" id="WVn-jw-et2"/>
                                     <tabBarItem tag="5" title="Chat" id="UUs-ae-FXG"/>
                                     <tabBarItem tag="6" title="Jobs" id="oTw-Yd-vW5"/>
@@ -172,6 +172,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Hub.png" width="30" height="30"/>
+        <image name="bond_hub.png" width="30" height="30"/>
         <image name="nav-menu" width="17" height="16"/>
+        <image name="news.png" width="31" height="22"/>
     </resources>
 </document>
