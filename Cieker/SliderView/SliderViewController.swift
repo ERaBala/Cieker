@@ -8,15 +8,21 @@
 
 import UIKit
 
-class SliderViewController: UIViewController {
+class SliderViewController: UIViewController/*,UITableViewDelegate,UITableViewDataSource */ {
 
-    @IBOutlet weak var TabelView: UITableView!
-    @IBOutlet weak var ProfilePicImageView: UIImageView!
+//    @IBOutlet weak var TabelView: UITableView!
+//    @IBOutlet weak var ProfilePicImageView: UIImageView!
     
-    var aData : [String] = ["bala","jeva","seetha"]
+//  var newArray: Array<String> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        
+//         newArray = ["sda","dsf","few"]
+//        
+//        self.TabelView.dataSource = self
+//        self.TabelView.delegate = self
+       
             // Do any additional setup after loading the view.
     }
 
@@ -24,20 +30,21 @@ class SliderViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return aData.count
-    }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let aCell = tableView.dequeueReusableCellWithIdentifier(
-            "Cell", forIndexPath: indexPath)
-       
-        return aCell
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-       
-    }
+//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return newArray.count
+//    }
+//    
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        
+//        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+//        cell.textLabel?.text = self.newArray[indexPath.row]
+//        return cell
+//    }
+//    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//       
+//    }
 
 
 }

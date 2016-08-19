@@ -28,9 +28,7 @@ class ViewController: UIViewController, ENSideMenuDelegate, UITabBarDelegate, UI
         super.viewDidLoad()
 
         self.sideMenuController()?.sideMenu?.delegate = self
-        let url = NSURL (string: "https://www.cieker.com");
-        let requestObj = NSURLRequest(URL: url!);
-        WebViewControl.loadRequest(requestObj);
+        webview("https://www.cieker.com")
 
     }
     
@@ -38,6 +36,12 @@ class ViewController: UIViewController, ENSideMenuDelegate, UITabBarDelegate, UI
         super.viewWillAppear(animated)
         //set inital view
         
+    }
+    
+    func webview(URL: String){
+        let url = NSURL (string: URL);
+        let requestObj = NSURLRequest(URL: url!);
+        WebViewControl.loadRequest(requestObj);
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,13 +55,25 @@ class ViewController: UIViewController, ENSideMenuDelegate, UITabBarDelegate, UI
     
     // UITabBarDelegate
     func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
-        print("Selected item")
-        print(item.accessibilityLabel)
-        
-        let selectedTag = tabBar.selectedItem?.tag
-        print(selectedTag)
-        
-
+       
+        switch (item.tag) {
+        case 1:
+            webview("https://www.cieker.com")
+        case 2:
+            webview("https://www.cieker.com/scoops.php")
+        case 3:
+           webview("https://www.cieker.com/teams.php")
+        case 4:
+            webview("https://www.cieker.com/qanda.php")
+        case 5:
+            webview("https://www.cieker.com/chat.php")
+        case 6:
+            webview("https://www.cieker.com/jobs.php")
+        case 7:
+            webview("https://www.cieker.com/Tutorial.php")
+        default:
+            break
+        }
     }
     
     // UITabBarControllerDelegate

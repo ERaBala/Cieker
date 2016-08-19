@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="2Dv-qn-Yu5">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
@@ -42,13 +42,13 @@
                                 <rect key="frame" x="0.0" y="551" width="600" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="Hub" id="3AB-Bf-Acb"/>
-                                    <tabBarItem title="Scoops" id="bsx-ZZ-zgS"/>
-                                    <tabBarItem title="Team" id="aUx-gM-uWK"/>
-                                    <tabBarItem title="Q&amp;A" id="WVn-jw-et2"/>
-                                    <tabBarItem title="Chat" id="UUs-ae-FXG"/>
-                                    <tabBarItem title="Jobs" id="oTw-Yd-vW5"/>
-                                    <tabBarItem title="Tutorial" id="hfu-6t-cSi"/>
+                                    <tabBarItem tag="1" title="Hub" id="3AB-Bf-Acb"/>
+                                    <tabBarItem tag="2" title="Scoops" id="bsx-ZZ-zgS"/>
+                                    <tabBarItem tag="3" title="Team" id="aUx-gM-uWK"/>
+                                    <tabBarItem tag="4" title="Q&amp;A" id="WVn-jw-et2"/>
+                                    <tabBarItem tag="5" title="Chat" id="UUs-ae-FXG"/>
+                                    <tabBarItem tag="6" title="Jobs" id="oTw-Yd-vW5"/>
+                                    <tabBarItem tag="7" title="Tutorial" id="hfu-6t-cSi"/>
                                 </items>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Hcg-Nb-AtX"/>
@@ -56,7 +56,7 @@
                             </tabBar>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="2Dv-qn-Yu5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4P7-IU-RWX"/>
+                            <constraint firstItem="2Dv-qn-Yu5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="4P7-IU-RWX"/>
                             <constraint firstItem="2Dv-qn-Yu5" firstAttribute="trailing" secondItem="t99-gd-SMI" secondAttribute="trailing" id="BTC-JH-wxx"/>
                             <constraint firstItem="t99-gd-SMI" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Gxl-WE-fh3"/>
                             <constraint firstItem="2Dv-qn-Yu5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="avz-hR-KYA"/>
@@ -66,7 +66,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="atS-3s-RRb">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="QkS-jH-dzl">
+                        <barButtonItem key="leftBarButtonItem" image="nav-menu" style="plain" id="QkS-jH-dzl">
+                            <color key="tintColor" red="0.93725490199999995" green="0.63137254899999995" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="Slidertoggle:" destination="BYZ-38-t0r" id="Pbl-gu-584"/>
                             </connections>
@@ -88,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="296" y="429"/>
         </scene>
-        <!--Slider View Controller-->
+        <!--View Controller-->
         <scene sceneID="zI7-Xc-dzp">
             <objects>
-                <viewController storyboardIdentifier="sideMenuID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cvz-qu-0NZ" customClass="SliderViewController" customModule="Cieker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sideMenuID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cvz-qu-0NZ" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gRa-V5-NWD"/>
                         <viewControllerLayoutGuide type="bottom" id="mxH-Bm-4WY"/>
@@ -149,7 +150,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIw-hI-YEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26" y="1158"/>
+            <point key="canvasLocation" x="-152" y="1158"/>
+        </scene>
+        <!--Slider View Controller-->
+        <scene sceneID="yCy-Q6-7Ub">
+            <objects>
+                <viewController id="qLp-82-xoK" customClass="SliderViewController" customModule="Cieker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ddb-ye-MGS"/>
+                        <viewControllerLayoutGuide type="bottom" id="yLM-7V-uPt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="10L-1K-bB9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zY7-wK-fQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="296" y="1158"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="nav-menu" width="17" height="16"/>
+    </resources>
 </document>
