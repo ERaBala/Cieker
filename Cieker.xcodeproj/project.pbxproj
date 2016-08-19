@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2DFB87841D66ADDC0042E4AD /* FormGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB87831D66ADDC0042E4AD /* FormGlobal.swift */; };
+		7B802617B2D4625797981FA7 /* Pods_Cieker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD14D3FBE75903BDF977D8A /* Pods_Cieker.framework */; };
 		CEB90AB91D65BD6100A897DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB90AB81D65BD6100A897DE /* AppDelegate.swift */; };
 		CEB90ABB1D65BD6100A897DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB90ABA1D65BD6100A897DE /* ViewController.swift */; };
 		CEB90ABE1D65BD6100A897DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB90ABC1D65BD6100A897DE /* Main.storyboard */; };
@@ -21,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		2DFB87831D66ADDC0042E4AD /* FormGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormGlobal.swift; path = GlobelFiles/FormGlobal.swift; sourceTree = "<group>"; };
+		565F3124182CE3337D3DACF2 /* Pods-Cieker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cieker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cieker/Pods-Cieker.release.xcconfig"; sourceTree = "<group>"; };
+		8CD14D3FBE75903BDF977D8A /* Pods_Cieker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cieker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB90AB51D65BD6100A897DE /* Cieker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cieker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB90AB81D65BD6100A897DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB90ABA1D65BD6100A897DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		CEB90ACC1D65BDD800A897DE /* KSideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KSideMenuVC.swift; path = SliderPlugin/KSideMenuVC.swift; sourceTree = "<group>"; };
 		CEB90ACF1D65C02B00A897DE /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
 		CEB90AD31D65E39000A897DE /* Nav-bar-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Nav-bar-1.png"; path = "Cieker/Resources/Test/Nav-bar-1.png"; sourceTree = "<group>"; };
+		DFE83F1FFD90AE1D49231D22 /* Pods-Cieker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cieker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cieker/Pods-Cieker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,18 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B802617B2D4625797981FA7 /* Pods_Cieker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		003695D291E5C8A3757C4BEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFE83F1FFD90AE1D49231D22 /* Pods-Cieker.debug.xcconfig */,
+				565F3124182CE3337D3DACF2 /* Pods-Cieker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2280874507F5F5D9A3CB12B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CD14D3FBE75903BDF977D8A /* Pods_Cieker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CEB90AAC1D65BD6100A897DE = {
 			isa = PBXGroup;
 			children = (
 				CEB90AB71D65BD6100A897DE /* Cieker */,
 				CEB90AD11D65E30500A897DE /* Resources */,
 				CEB90AB61D65BD6100A897DE /* Products */,
+				003695D291E5C8A3757C4BEC /* Pods */,
+				2280874507F5F5D9A3CB12B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,9 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEB90AC71D65BD6100A897DE /* Build configuration list for PBXNativeTarget "Cieker" */;
 			buildPhases = (
+				C9A19DF4FFDDF16434A27E68 /* [CP] Check Pods Manifest.lock */,
 				CEB90AB11D65BD6100A897DE /* Sources */,
 				CEB90AB21D65BD6100A897DE /* Frameworks */,
 				CEB90AB31D65BD6100A897DE /* Resources */,
+				4D0890D08D2D04C203D45B28 /* [CP] Embed Pods Frameworks */,
+				7D538E80E1DF4B24EEF34601 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,6 +202,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D0890D08D2D04C203D45B28 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cieker/Pods-Cieker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D538E80E1DF4B24EEF34601 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cieker/Pods-Cieker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9A19DF4FFDDF16434A27E68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CEB90AB11D65BD6100A897DE /* Sources */ = {
@@ -299,6 +374,7 @@
 		};
 		CEB90AC81D65BD6100A897DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFE83F1FFD90AE1D49231D22 /* Pods-Cieker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -311,6 +387,7 @@
 		};
 		CEB90AC91D65BD6100A897DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 565F3124182CE3337D3DACF2 /* Pods-Cieker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

@@ -1,0 +1,6 @@
+framework module Pods_Cieker {
+  umbrella header "Pods-Cieker-umbrella.h"
+
+  export *
+  module * { export * }
+}
