@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DFB87841D66ADDC0042E4AD /* FormGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB87831D66ADDC0042E4AD /* FormGlobal.swift */; };
 		CEB90AB91D65BD6100A897DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB90AB81D65BD6100A897DE /* AppDelegate.swift */; };
 		CEB90ABB1D65BD6100A897DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB90ABA1D65BD6100A897DE /* ViewController.swift */; };
 		CEB90ABE1D65BD6100A897DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB90ABC1D65BD6100A897DE /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DFB87831D66ADDC0042E4AD /* FormGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormGlobal.swift; path = GlobelFiles/FormGlobal.swift; sourceTree = "<group>"; };
 		CEB90AB51D65BD6100A897DE /* Cieker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cieker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB90AB81D65BD6100A897DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB90ABA1D65BD6100A897DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB90ABC1D65BD6100A897DE /* Main.storyboard */,
+				2DFB87831D66ADDC0042E4AD /* FormGlobal.swift */,
 				CEB90ACA1D65BD6A00A897DE /* SliderViewPlugin */,
 				CEB90AB81D65BD6100A897DE /* AppDelegate.swift */,
 				CEB90ABA1D65BD6100A897DE /* ViewController.swift */,
@@ -132,6 +135,12 @@
 				TargetAttributes = {
 					CEB90AB41D65BD6100A897DE = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 547UZTJW2V;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -176,6 +185,7 @@
 				CEB90AD01D65C02B00A897DE /* SliderViewController.swift in Sources */,
 				CEB90ACD1D65BDD800A897DE /* kConstant.swift in Sources */,
 				CEB90ACE1D65BDD800A897DE /* KSideMenuVC.swift in Sources */,
+				2DFB87841D66ADDC0042E4AD /* FormGlobal.swift in Sources */,
 				CEB90AB91D65BD6100A897DE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,9 +301,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Cieker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.Cieker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cieker.ios.vjtarget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -302,9 +313,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Cieker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.Cieker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cieker.ios.vjtarget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -328,6 +340,7 @@
 				CEB90AC91D65BD6100A897DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
