@@ -12,6 +12,8 @@
 		2DF72FAC1D678B5300EC9774 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DF72FAB1D678B5300EC9774 /* news.png */; };
 		2DF72FB01D678F8600EC9774 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DF72FAF1D678F8600EC9774 /* GoogleService-Info.plist */; };
 		2DFB87841D66ADDC0042E4AD /* FormGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB87831D66ADDC0042E4AD /* FormGlobal.swift */; };
+		2DFFC0D91D69D58300848714 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFFC0D81D69D58300848714 /* TextFieldStyle.swift */; };
+		2DFFC0DB1D69DC2200848714 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFFC0DA1D69DC2200848714 /* RegistrationVC.swift */; };
 		7B802617B2D4625797981FA7 /* Pods_Cieker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD14D3FBE75903BDF977D8A /* Pods_Cieker.framework */; };
 		CE6552491D67061C00C916C4 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6552471D67061C00C916C4 /* ENSideMenu.swift */; };
 		CE65524A1D67061C00C916C4 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6552481D67061C00C916C4 /* ENSideMenuNavigationController.swift */; };
@@ -31,6 +33,8 @@
 		2DF72FAF1D678F8600EC9774 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DF72FB11D678FC100EC9774 /* Cieker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cieker-Bridging-Header.h"; sourceTree = "<group>"; };
 		2DFB87831D66ADDC0042E4AD /* FormGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormGlobal.swift; path = GlobelFiles/FormGlobal.swift; sourceTree = "<group>"; };
+		2DFFC0D81D69D58300848714 /* TextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldStyle.swift; path = GlobelFiles/TextFieldStyle.swift; sourceTree = "<group>"; };
+		2DFFC0DA1D69DC2200848714 /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegistrationVC.swift; path = RegisterAndLogin/RegistrationVC.swift; sourceTree = "<group>"; };
 		565F3124182CE3337D3DACF2 /* Pods-Cieker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cieker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cieker/Pods-Cieker.release.xcconfig"; sourceTree = "<group>"; };
 		8CD14D3FBE75903BDF977D8A /* Pods_Cieker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cieker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6552471D67061C00C916C4 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenu.swift; path = SliderView/Plugin/ENSideMenu.swift; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2DF91D6F1D694ADD00B3D956 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				2DFB87831D66ADDC0042E4AD /* FormGlobal.swift */,
+				2DFFC0D81D69D58300848714 /* TextFieldStyle.swift */,
+			);
+			name = Global;
+			sourceTree = "<group>";
+		};
 		CE6552461D67060B00C916C4 /* Plugin */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,8 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				CEB90ABC1D65BD6100A897DE /* Main.storyboard */,
-				2DFB87831D66ADDC0042E4AD /* FormGlobal.swift */,
 				CEB90AB81D65BD6100A897DE /* AppDelegate.swift */,
+				2DF91D6F1D694ADD00B3D956 /* Global */,
 				CEB90ACA1D65BD6A00A897DE /* SliderViewPlugin */,
 				CEB90ABA1D65BD6100A897DE /* ViewController.swift */,
 				CEB90ABF1D65BD6100A897DE /* Assets.xcassets */,
@@ -117,6 +130,7 @@
 				CEB90AC41D65BD6100A897DE /* Info.plist */,
 				2DF72FAF1D678F8600EC9774 /* GoogleService-Info.plist */,
 				2DF72FB11D678FC100EC9774 /* Cieker-Bridging-Header.h */,
+				2DFFC0DA1D69DC2200848714 /* RegistrationVC.swift */,
 			);
 			path = Cieker;
 			sourceTree = "<group>";
@@ -282,8 +296,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6552491D67061C00C916C4 /* ENSideMenu.swift in Sources */,
+				2DFFC0D91D69D58300848714 /* TextFieldStyle.swift in Sources */,
 				CEB90ABB1D65BD6100A897DE /* ViewController.swift in Sources */,
 				CE65524E1D6706B200C916C4 /* SliderNavigationVC.swift in Sources */,
+				2DFFC0DB1D69DC2200848714 /* RegistrationVC.swift in Sources */,
 				2DFB87841D66ADDC0042E4AD /* FormGlobal.swift in Sources */,
 				CE65524C1D67062800C916C4 /* SliderViewController.swift in Sources */,
 				CE65524A1D67061C00C916C4 /* ENSideMenuNavigationController.swift in Sources */,
@@ -406,6 +422,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Cieker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cieker.ios.vjtarget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,6 +439,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Cieker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cieker.ios.vjtarget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
