@@ -51,13 +51,13 @@
                                 </connections>
                             </tabBar>
                             <webView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="2Dv-qn-Yu5">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="2Dv-qn-Yu5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="4P7-IU-RWX"/>
+                            <constraint firstItem="2Dv-qn-Yu5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4P7-IU-RWX"/>
                             <constraint firstItem="2Dv-qn-Yu5" firstAttribute="trailing" secondItem="t99-gd-SMI" secondAttribute="trailing" id="BTC-JH-wxx"/>
                             <constraint firstItem="t99-gd-SMI" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Gxl-WE-fh3"/>
                             <constraint firstItem="2Dv-qn-Yu5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="avz-hR-KYA"/>
@@ -67,7 +67,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="atS-3s-RRb">
-                        <barButtonItem key="backBarButtonItem" title="&lt;" id="Q93-rM-Vih"/>
                         <barButtonItem key="leftBarButtonItem" image="nav-menu" style="plain" id="QkS-jH-dzl">
                             <color key="tintColor" red="0.93725490199999995" green="0.63137254899999995" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -76,9 +75,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="T0S-xb-zPD">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="a5w-cc-aOe">
-                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <rect key="frame" x="441" y="7" width="139" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Click Here for Token"/>
                                 <connections>
                                     <segue destination="WMD-Yv-QhF" kind="show" id="lx8-80-DEd"/>
                                 </connections>

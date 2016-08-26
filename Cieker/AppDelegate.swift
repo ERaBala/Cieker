@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Google
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GCMReceiverDelegate  {
@@ -172,6 +173,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
 
             FormGlobal.UserDefaultFunction(defaultName: registrationToken, defaultKey: "DeviceToken") .NSStringForKey()
             
+            JSONMethod(registrationToken)
+            
             print("https://www.cieker.com/regis.php?gcm=\(registrationToken)")
             self.subscribeToTopic()
             let userInfo = ["registrationToken": registrationToken]
@@ -202,6 +205,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
             // Will send message, you can save the messageID to track the message
         }
     }
+    
+    func JSONMethod( parameters: AnyObject ) {
+        let  url =  NSURL(string:"http://URl.php")
+        
+        Alamofire.request(.POST, url!, parameters: parameters as? [String : AnyObject], encoding:.JSON).responseJSON
+            { response in
+                switch response.result {
+                case .Success(let JSON):
+                    print("Success with JSON: \(JSON)")
+                    
+                    //                let response = JSON as! NSArray
+                    /*if let JSON = response.result.value
+                    {
+                        self.jsonArray = JSON as? NSMutableArray
+                        
+                        for item in self.jsonArray! {
+                            print(item["id"]!)
+                            let string = item["buskerName"]!
+                            print("String is \(string!)")
+                            
+                            self.newArray.append(string! as! String)
+                        }
+                        
+                        print("New array is \(self.newArray)")
+                        
+                        self.TableVieq.reloadData()
+                    }*/
+                case .Failure(let error):
+                    print("Request failed with error: \(error)")
+                }
+        }
+    }
+    
     
     func didSendDataMessageWithID(messageID: String!) {
         // Did successfully send message identified by messageID
