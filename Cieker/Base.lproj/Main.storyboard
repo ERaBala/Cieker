@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Slider NavigationVC-->
@@ -66,11 +67,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="atS-3s-RRb">
+                        <barButtonItem key="backBarButtonItem" title="&lt;" id="Q93-rM-Vih"/>
                         <barButtonItem key="leftBarButtonItem" image="nav-menu" style="plain" id="QkS-jH-dzl">
                             <color key="tintColor" red="0.93725490199999995" green="0.63137254899999995" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="Slidertoggle:" destination="BYZ-38-t0r" id="Pbl-gu-584"/>
                             </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="T0S-xb-zPD">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="a5w-cc-aOe">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="WMD-Yv-QhF" kind="show" id="lx8-80-DEd"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -88,6 +100,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="296" y="429"/>
+        </scene>
+        <!--RegistrationVC-->
+        <scene sceneID="dom-MU-yfw">
+            <objects>
+                <viewController id="WMD-Yv-QhF" customClass="RegistrationVC" customModule="Cieker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e7b-JZ-Utz"/>
+                        <viewControllerLayoutGuide type="bottom" id="2eL-Fr-Cqa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gdm-xF-sEe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text=" " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H9I-mx-IB1">
+                                <rect key="frame" x="20" y="79" width="560" height="501"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H9I-mx-IB1" firstAttribute="top" secondItem="e7b-JZ-Utz" secondAttribute="bottom" constant="15" id="YzF-5H-lkS"/>
+                            <constraint firstAttribute="bottom" secondItem="H9I-mx-IB1" secondAttribute="bottom" constant="20" symbolic="YES" id="ddM-KZ-ANh"/>
+                            <constraint firstItem="H9I-mx-IB1" firstAttribute="trailing" secondItem="Gdm-xF-sEe" secondAttribute="trailingMargin" id="gWY-lB-4Zw"/>
+                            <constraint firstItem="H9I-mx-IB1" firstAttribute="leading" secondItem="Gdm-xF-sEe" secondAttribute="leadingMargin" id="lJ2-kd-Y8P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textviewvalue" destination="H9I-mx-IB1" id="goa-mH-azi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2e2-fa-Koa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013" y="32"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rSg-JO-RmL">
@@ -159,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWj-o0-ddu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="975" y="429"/>
+            <point key="canvasLocation" x="1069" y="721"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zI7-Xc-dzp">

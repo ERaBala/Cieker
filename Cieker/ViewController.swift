@@ -28,8 +28,16 @@ class ViewController: UIViewController, ENSideMenuDelegate, UITabBarDelegate, UI
         super.viewDidLoad()
 
         self.sideMenuController()?.sideMenu?.delegate = self
+        
+        let DeviceToken: [NSString]? = NSUserDefaults.standardUserDefaults().objectForKey("DeviceToken") as? [NSString]
+//        let devicetockenn = "hxxgfc ghs"
+        
+        let CompletURl = "https://www.cieker.com/regis.php?gcm=\(DeviceToken)"
+        print(CompletURl)
+        
         webview("https://www.cieker.com")
-
+//        webview(CompletURl)
+        
     }
     
     override func viewWillAppear(animated: Bool) {

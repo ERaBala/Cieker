@@ -80,6 +80,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2DA6CFDA1D6B53C900C3C3C4 /* supoorting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = supoorting;
+			sourceTree = "<group>";
+		};
 		2DF91D6F1D694ADD00B3D956 /* Global */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +127,7 @@
 		CEB90AB71D65BD6100A897DE /* Cieker */ = {
 			isa = PBXGroup;
 			children = (
+				2DA6CFDA1D6B53C900C3C3C4 /* supoorting */,
 				CEB90ABC1D65BD6100A897DE /* Main.storyboard */,
 				CEB90AB81D65BD6100A897DE /* AppDelegate.swift */,
 				2DF91D6F1D694ADD00B3D956 /* Global */,
@@ -200,6 +208,9 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 547UZTJW2V;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};

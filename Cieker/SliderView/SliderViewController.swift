@@ -13,10 +13,16 @@ class SliderViewController: UIViewController/*,UITableViewDelegate,UITableViewDa
 //    @IBOutlet weak var TabelView: UITableView!
 //    @IBOutlet weak var ProfilePicImageView: UIImageView!
     
+
 //  var newArray: Array<String> = []
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
 //        
 //         newArray = ["sda","dsf","few"]
 //        

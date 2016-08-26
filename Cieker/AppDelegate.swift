@@ -52,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
         gcmConfig.receiverDelegate = self
         GCMService.sharedInstance().startWithConfig(gcmConfig)
         // [END start_gcm_service]
+        
         return true
     }
     
@@ -134,6 +135,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
     func application( application: UIApplication,
                       didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         print("Notification received: \(userInfo)")
+        
+        FormGlobal.Aleart(Title: "PushNotification", Message: userInfo, btnTitle: "ok") .ShowAleartFunction()
+        
         // This works only if the app started the GCM service
         GCMService.sharedInstance().appDidReceiveMessage(userInfo);
         // Handle the received message
@@ -147,6 +151,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
                       didReceiveRemoteNotification userInfo: [NSObject : AnyObject],
                                                    fetchCompletionHandler handler: (UIBackgroundFetchResult) -> Void) {
         print("Notification received: \(userInfo)")
+        FormGlobal.Aleart(Title: "Push Notification", Message: userInfo, btnTitle: "ok") .ShowAleartFunction()
+        
         // This works only if the app started the GCM service
         GCMService.sharedInstance().appDidReceiveMessage(userInfo);
         // Handle the received message
@@ -163,6 +169,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
         if (registrationToken != nil) {
             self.registrationToken = registrationToken
             print("Registration Token: \(registrationToken)")
+
+            FormGlobal.UserDefaultFunction(defaultName: registrationToken, defaultKey: "DeviceToken") .NSStringForKey()
+            
+            print("https://www.cieker.com/regis.php?gcm=\(registrationToken)")
             self.subscribeToTopic()
             let userInfo = ["registrationToken": registrationToken]
             NSNotificationCenter.defaultCenter().postNotificationName(
