@@ -113,21 +113,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text=" " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H9I-mx-IB1">
-                                <rect key="frame" x="20" y="79" width="560" height="501"/>
+                                <rect key="frame" x="20" y="111" width="560" height="197"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="197" id="ONo-HO-nB8"/>
+                                    <constraint firstAttribute="width" constant="560" id="fyp-UC-AO6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text=" " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zvr-VX-0wd">
+                                <rect key="frame" x="20" y="354" width="560" height="226"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="352-2J-CWT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device Token:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmv-Lu-o9c">
+                                <rect key="frame" x="20" y="82" width="108" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="wz6-7X-iYy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Push Notification Msg:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pnm-8X-dbD">
+                                <rect key="frame" x="20" y="325" width="173" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="tKZ-zJ-IhX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Na-6E-AuC">
+                                <rect key="frame" x="234" y="321" width="70" height="30"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="Button:" destination="WMD-Yv-QhF" eventType="touchUpInside" id="HdJ-Tp-5SJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="H9I-mx-IB1" firstAttribute="top" secondItem="e7b-JZ-Utz" secondAttribute="bottom" constant="15" id="YzF-5H-lkS"/>
-                            <constraint firstAttribute="bottom" secondItem="H9I-mx-IB1" secondAttribute="bottom" constant="20" symbolic="YES" id="ddM-KZ-ANh"/>
-                            <constraint firstItem="H9I-mx-IB1" firstAttribute="trailing" secondItem="Gdm-xF-sEe" secondAttribute="trailingMargin" id="gWY-lB-4Zw"/>
-                            <constraint firstItem="H9I-mx-IB1" firstAttribute="leading" secondItem="Gdm-xF-sEe" secondAttribute="leadingMargin" id="lJ2-kd-Y8P"/>
+                            <constraint firstAttribute="bottom" secondItem="zvr-VX-0wd" secondAttribute="bottom" constant="20" symbolic="YES" id="1Pv-oJ-pwv"/>
+                            <constraint firstItem="pmv-Lu-o9c" firstAttribute="leading" secondItem="H9I-mx-IB1" secondAttribute="leading" id="4hi-Og-7uu"/>
+                            <constraint firstItem="pmv-Lu-o9c" firstAttribute="leading" secondItem="Gdm-xF-sEe" secondAttribute="leadingMargin" id="IBV-VY-xIs"/>
+                            <constraint firstItem="H9I-mx-IB1" firstAttribute="trailing" secondItem="zvr-VX-0wd" secondAttribute="trailing" id="JBn-rF-RnV"/>
+                            <constraint firstItem="H9I-mx-IB1" firstAttribute="trailing" secondItem="Gdm-xF-sEe" secondAttribute="trailingMargin" id="Shc-ER-svk"/>
+                            <constraint firstItem="H9I-mx-IB1" firstAttribute="top" secondItem="pmv-Lu-o9c" secondAttribute="bottom" constant="8" symbolic="YES" id="a4E-nJ-wcc"/>
+                            <constraint firstItem="Pnm-8X-dbD" firstAttribute="top" secondItem="H9I-mx-IB1" secondAttribute="bottom" constant="17" id="c9E-Qr-74q"/>
+                            <constraint firstItem="zvr-VX-0wd" firstAttribute="top" secondItem="Pnm-8X-dbD" secondAttribute="bottom" constant="8" symbolic="YES" id="j8R-zQ-iQj"/>
+                            <constraint firstItem="H9I-mx-IB1" firstAttribute="leading" secondItem="Pnm-8X-dbD" secondAttribute="leading" id="pDR-7U-1uU"/>
+                            <constraint firstItem="pmv-Lu-o9c" firstAttribute="top" secondItem="e7b-JZ-Utz" secondAttribute="bottom" constant="18" id="tnq-pi-HOU"/>
+                            <constraint firstItem="Pnm-8X-dbD" firstAttribute="leading" secondItem="zvr-VX-0wd" secondAttribute="leading" id="u9p-x2-uTR"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="PushNotificationText" destination="zvr-VX-0wd" id="XPz-kj-Eoy"/>
                         <outlet property="textviewvalue" destination="H9I-mx-IB1" id="goa-mH-azi"/>
                     </connections>
                 </viewController>

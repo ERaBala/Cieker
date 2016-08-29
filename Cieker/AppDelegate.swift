@@ -136,6 +136,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
     func application( application: UIApplication,
                       didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         print("Notification received: \(userInfo)")
+        let aps = userInfo["message"] as! String
+        Aleartmessage(aps)
+        print("message: \(aps)")
         
         // This works only if the app started the GCM service
         GCMService.sharedInstance().appDidReceiveMessage(userInfo);
@@ -143,27 +146,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
         // [START_EXCLUDE]
         NSNotificationCenter.defaultCenter().postNotificationName(messageKey, object: nil,
                                                                   userInfo: userInfo)
-        Aleartmessage(userInfo)
+
         // [END_EXCLUDE]
     }
     
     
-    func Aleartmessage(userinfo : AnyObject)  {
+    func Aleartmessage(userinfo : NSString)  {
+        
+        
+         FormGlobal.Aleart(Title: "Push Notification", Message: userinfo as String, btnTitle: "ok") .ShowAleartFunction()
         
         let localNotification = UILocalNotification()
-        localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
-        localNotification.alertBody = userinfo as? String
-        localNotification.timeZone = NSTimeZone.defaultTimeZone()
-        localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
-        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        localNotification.soundName = UILocalNotificationDefaultSoundName //If you want an alert sound.
+        localNotification.alertBody = userinfo as String //Put your notification message here
+        localNotification.applicationIconBadgeNumber += 1 //Change what the badge number should be
+        
+        UIApplication.sharedApplication().presentLocalNotificationNow(localNotification)
+      
     }
     
     func application( application: UIApplication,
                       didReceiveRemoteNotification userInfo: [NSObject : AnyObject],
                                                    fetchCompletionHandler handler: (UIBackgroundFetchResult) -> Void) {
         print("Notification received: \(userInfo)")
-
-         Aleartmessage(userInfo)
+        
+        let aps = userInfo["message"] as! String
+         Aleartmessage(aps)
+        print("message: \(aps)")
         
         // This works only if the app started the GCM service
         GCMService.sharedInstance().appDidReceiveMessage(userInfo);
