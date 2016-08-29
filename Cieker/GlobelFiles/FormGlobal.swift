@@ -25,7 +25,7 @@ class FormGlobal: NSObject {
     struct Aleart {
         
         var Title: String
-        var Message: AnyObject
+        var Message: String
         var btnTitle: String
         
         func ShowAleartFunction()

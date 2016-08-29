@@ -26,6 +26,9 @@ class ViewController: UIViewController, ENSideMenuDelegate, UITabBarDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let userInfo = "Hi Welcome"
+        FormGlobal.Aleart(Title: "Push Notification", Message: userInfo, btnTitle: "ok") .ShowAleartFunction()
 
         self.sideMenuController()?.sideMenu?.delegate = self
         
@@ -37,6 +40,13 @@ class ViewController: UIViewController, ENSideMenuDelegate, UITabBarDelegate, UI
         
         webview("https://www.cieker.com")
 //        webview(CompletURl)
+        
+    }
+    
+    func Aleartmessage(userinfo : AnyObject)  {
+        
+        let Message = userinfo as! String
+        FormGlobal.Aleart(Title: "PushNotification", Message: Message, btnTitle: "ok") .ShowAleartFunction()
         
     }
     

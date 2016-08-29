@@ -137,22 +137,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
                       didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         print("Notification received: \(userInfo)")
         
-        FormGlobal.Aleart(Title: "PushNotification", Message: userInfo, btnTitle: "ok") .ShowAleartFunction()
-        
         // This works only if the app started the GCM service
         GCMService.sharedInstance().appDidReceiveMessage(userInfo);
         // Handle the received message
         // [START_EXCLUDE]
         NSNotificationCenter.defaultCenter().postNotificationName(messageKey, object: nil,
                                                                   userInfo: userInfo)
+        Aleartmessage(userInfo)
         // [END_EXCLUDE]
+    }
+    
+    
+    func Aleartmessage(userinfo : AnyObject)  {
+        
+        let localNotification = UILocalNotification()
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
+        localNotification.alertBody = userinfo as? String
+        localNotification.timeZone = NSTimeZone.defaultTimeZone()
+        localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
     }
     
     func application( application: UIApplication,
                       didReceiveRemoteNotification userInfo: [NSObject : AnyObject],
                                                    fetchCompletionHandler handler: (UIBackgroundFetchResult) -> Void) {
         print("Notification received: \(userInfo)")
-        FormGlobal.Aleart(Title: "Push Notification", Message: userInfo, btnTitle: "ok") .ShowAleartFunction()
+
+         Aleartmessage(userInfo)
         
         // This works only if the app started the GCM service
         GCMService.sharedInstance().appDidReceiveMessage(userInfo);
