@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
         
         // ================= Status View ================= //
         let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.mainScreen().bounds.size.width, height: 20.0))
-        view.backgroundColor = UIColor(red: 40, green: 175, blue: 161, alpha: 1.0)
+        view.backgroundColor = UIColor.clearColor()
         self.window!.rootViewController!.view.addSubview(view)
         sleep(3)
         
@@ -141,14 +141,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
                       didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         print("Notification received: \(userInfo)")
         let aps = userInfo["message"] as! String
-        Aleartmessage(aps)
+//        Aleartmessage(aps)
         print("message: \(aps)")
         
         // This works only if the app started the GCM service
         GCMService.sharedInstance().appDidReceiveMessage(userInfo);
         // Handle the received message
         // [START_EXCLUDE]
-        NSNotificationCenter.defaultCenter().postNotificationName(messageKey, object: nil,
+        NSNotificationCenter.defaultCenter().postNotificationName(messageKey, object: aps,
                                                                   userInfo: userInfo)
 
         // [END_EXCLUDE]
@@ -172,7 +172,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
         print("Notification received: \(userInfo)")
         
         let aps = userInfo["message"] as! String
-         Aleartmessage(aps)
+//         Aleartmessage(aps)
         print("message: \(aps)")
         
         // This works only if the app started the GCM service
@@ -180,7 +180,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GGLInstanceIDDelegate, GC
         // Handle the received message
         // Invoke the completion handler passing the appropriate UIBackgroundFetchResult value
         // [START_EXCLUDE]
-        NSNotificationCenter.defaultCenter().postNotificationName("message", object: nil,
+        NSNotificationCenter.defaultCenter().postNotificationName("message", object: aps,
                                                                   userInfo: userInfo)
         handler(UIBackgroundFetchResult.NoData);
         // [END_EXCLUDE]

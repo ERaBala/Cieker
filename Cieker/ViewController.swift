@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var CiekerWebView: UIWebView!
     @IBOutlet weak var BackButtonoutlet: UIButton!
+    @IBOutlet weak var imageviewBackground: UIImageView!
     
     var flag : Int = 1
     var stringConvertionURL = ""
@@ -35,13 +36,22 @@ class ViewController: UIViewController {
             flag = 1
             webview(stringConvertionURL)
         }
+        
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.handleSwipes(_:)))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.handleSwipes(_:)))
+        
+        leftSwipe.direction = .Left
+        rightSwipe.direction = .Right
+        
+        view.addGestureRecognizer(leftSwipe)
+        view.addGestureRecognizer(rightSwipe)
+        
     }
     
     func Aleartmessage(userinfo : AnyObject)  {
         
         let Message = userinfo as! String
         FormGlobal.Aleart(Title: "PushNotification", Message: Message, btnTitle: "ok") .ShowAleartFunction()
-        
     }
 
     
@@ -75,6 +85,7 @@ class ViewController: UIViewController {
         if (urlString.rangeOfString("googleapis") != nil) || (urlString.rangeOfString("facebook.com") != nil){
             print("================= google & Facebook =================")
             BackButtonoutlet.hidden = false
+        
         }
         else if (urlString.rangeOfString("cieker.com") != nil) || (urlString.rangeOfString("www.cieker.com") != nil){
             print("++++++++++++++++++ google page ++++++++++++++++++")
@@ -89,6 +100,22 @@ class ViewController: UIViewController {
     @IBAction func BackButton(sender: AnyObject) {
         if(CiekerWebView.canGoBack) {
             CiekerWebView.goBack()
+        }
+    }
+    
+    func handleSwipes(sender:UISwipeGestureRecognizer) {
+        if (sender.direction == .Left) {
+            print("Swipe Left")
+            if(CiekerWebView.canGoForward) {
+                CiekerWebView.goForward()
+            }
+        }
+        
+        if (sender.direction == .Right) {
+            print("Swipe Right")
+            if(CiekerWebView.canGoBack) {
+                CiekerWebView.goBack()
+            }
         }
     }
     
