@@ -8,109 +8,116 @@
 import Foundation
 import UIKit
 
-// Tab Buttons
-
-class ViewController: UIViewController, ENSideMenuDelegate, UITabBarDelegate, UITabBarControllerDelegate {
-
-
-    @IBOutlet weak var TabBar: UITabBar!
-    @IBOutlet weak var hubTabBar: UITabBarItem!
-    @IBOutlet weak var ScoopsTabBar: UITabBarItem!
-    @IBOutlet weak var TeamTabBar: UITabBarItem!
-    @IBOutlet weak var QATabBar: UITabBarItem!
-    @IBOutlet weak var ChatTabBar: UITabBarItem!
-    @IBOutlet weak var JobsTabBar: UITabBarItem!
-    @IBOutlet weak var TutorialTabBar: UITabBarItem!
-    @IBOutlet weak var WebViewControl: UIWebView!
+class ViewController: UIViewController {
     
+    @IBOutlet weak var CiekerWebView: UIWebView!
+    @IBOutlet weak var BackButtonoutlet: UIButton!
+    @IBOutlet weak var imageviewBackground: UIImageView!
+    
+    var flag : Int = 1
+    var stringConvertionURL = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        BackButtonoutlet.hidden = true
+        print("error ======================")
+        let DeviceToken = NSUserDefaults.standardUserDefaults().objectForKey("DeviceToken")
+        print(DeviceToken)
+        if DeviceToken != nil {
+            stringConvertionURL = DeviceToken as! String
+//            Aleartmessage(stringConvertionURL)
+            flag = 0
+            webview(stringConvertionURL)
 
-        self.sideMenuController()?.sideMenu?.delegate = self
+        }
+        else if (flag == 1) {
+            stringConvertionURL = "https://www.cieker.com/"
+            flag = 1
+            webview(stringConvertionURL)
+        }
         
-        let DeviceToken: [NSString]? = NSUserDefaults.standardUserDefaults().objectForKey("DeviceToken") as? [NSString]
-//        let devicetockenn = "hxxgfc ghs"
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.handleSwipes(_:)))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.handleSwipes(_:)))
         
-        let CompletURl = "https://www.cieker.com/regis.php?gcm=\(DeviceToken)"
-        print(CompletURl)
+        leftSwipe.direction = .Left
+        rightSwipe.direction = .Right
         
-        webview("https://www.cieker.com")
-//        webview(CompletURl)
+        view.addGestureRecognizer(leftSwipe)
+        view.addGestureRecognizer(rightSwipe)
         
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        //set inital view
+    func Aleartmessage(userinfo : AnyObject)  {
         
+        let Message = userinfo as! String
+        FormGlobal.Aleart(Title: "PushNotification", Message: Message, btnTitle: "ok") .ShowAleartFunction()
     }
+
     
     func webview(URL: String){
-        let url = NSURL (string: URL);
-        let requestObj = NSURLRequest(URL: url!);
-        WebViewControl.loadRequest(requestObj);
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func Slidertoggle(sender: AnyObject) {
-        toggleSideMenuView()
+        CiekerWebView.loadRequest(NSURLRequest(URL: NSURL(string: URL)!))
     }
     
-    // UITabBarDelegate
-    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
-       
-        switch (item.tag) {
-        case 1:
-            webview("https://www.cieker.com")
-        case 2:
-            webview("https://www.cieker.com/scoops.php")
-        case 3:
-           webview("https://www.cieker.com/teams.php")
-        case 4:
-            webview("https://www.cieker.com/qanda.php")
-        case 5:
-            webview("https://www.cieker.com/chat.php")
-        case 6:
-            webview("https://www.cieker.com/jobs.php")
-        case 7:
-            webview("https://www.cieker.com/Tutorial.php")
-        default:
-            break
+    func webView(CiekerWebView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+//        if navigationType == UIWebViewNavigationType.LinkClicked {
+////            UIApplication.sharedApplication().openURL(request.URL!)
+//            return false
+//        }
+        return true
+    }
+
+//    func webViewDidStartLoad(CiekerWebView: UIWebView) {
+//            BackButtonoutlet.hidden = true
+//    }
+    
+    func webViewDidFinishLoad(CiekerWebView: UIWebView)
+    {
+        
+//         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        // Disable user selection
+    CiekerWebView.stringByEvaluatingJavaScriptFromString("document.documentElement.style.webkitUserSelect='none'")!
+        // Disable callout
+    CiekerWebView.stringByEvaluatingJavaScriptFromString("document.documentElement.style.webkitTouchCallout='none'")!
+        let currentURL = CiekerWebView.request!.mainDocumentURL
+        print("\(currentURL)")
+        let urlString: String = currentURL!.absoluteString
+        if (urlString.rangeOfString("googleapis") != nil) || (urlString.rangeOfString("facebook.com") != nil){
+            print("================= google & Facebook =================")
+            BackButtonoutlet.hidden = false
+        
+        }
+        else if (urlString.rangeOfString("cieker.com") != nil) || (urlString.rangeOfString("www.cieker.com") != nil){
+            print("++++++++++++++++++ google page ++++++++++++++++++")
+            BackButtonoutlet.hidden = true
+        }
+        else {
+            print("******************** something ********************")
+            BackButtonoutlet.hidden = false
         }
     }
     
-    // UITabBarControllerDelegate
-    func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
-        print("Selected view controller")
-    }
-
-
-    // MARK: - ENSideMenu Delegate
-    func sideMenuWillOpen() {
-        print("sideMenuWillOpen")
+    @IBAction func BackButton(sender: AnyObject) {
+        if(CiekerWebView.canGoBack) {
+            CiekerWebView.goBack()
+        }
     }
     
-    func sideMenuWillClose() {
-        print("sideMenuWillClose")
+    func handleSwipes(sender:UISwipeGestureRecognizer) {
+        if (sender.direction == .Left) {
+            print("Swipe Left")
+            if(CiekerWebView.canGoForward) {
+                CiekerWebView.goForward()
+            }
+        }
+        
+        if (sender.direction == .Right) {
+            print("Swipe Right")
+            if(CiekerWebView.canGoBack) {
+                CiekerWebView.goBack()
+            }
+        }
     }
     
-    func sideMenuShouldOpenSideMenu() -> Bool {
-        print("sideMenuShouldOpenSideMenu")
-        return true
-    }
-    
-    func sideMenuDidClose() {
-        print("sideMenuDidClose")
-    }
-    
-    func sideMenuDidOpen() {
-        print("sideMenuDidOpen")
-    }
-
 }
 

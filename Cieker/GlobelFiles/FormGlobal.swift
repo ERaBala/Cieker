@@ -25,14 +25,14 @@ class FormGlobal: NSObject {
     struct Aleart {
         
         var Title: String
-        var Message: AnyObject
+        var Message: String
         var btnTitle: String
         
         func ShowAleartFunction()
         {
             let alert = UIAlertView()
             alert.title = Title
-            alert.message = Message as! String
+            alert.message = Message 
             alert.addButtonWithTitle(btnTitle)
             alert.show()
         }
